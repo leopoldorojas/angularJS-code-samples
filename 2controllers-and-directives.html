@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="2controllers.js"></script>
+    <link rel="stylesheet" href="2stylesheet.css">
+  </head>
+  <body>
+    <h2>Teams in World Cup Brazil 2014</h2>
+    <div ng-controller="TeamsCtrl">
+      <span>{{remaining()}} with possibilities to be champion, of {{teams.length}} teams</span>
+      [ <a href="" ng-click="restart()">Restart only with classified teams</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="team in teams">
+          <input type="checkbox" ng-model="team.eliminated">
+          <span class="reject-{{team.eliminated}}">{{team.name}}</span>
+        </li>
+      </ul>
+      <form ng-submit="addTeam()">
+        <input type="text" ng-model="teamName"  size="30"
+               placeholder="add new team here">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+    </div>
+  </body>
+</html>
