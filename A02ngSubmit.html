@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <title>My First App with AngularJS</title>
+</head>
+<body>
+  <h1>World Cup Brasil 2014</h1>
+  <div>
+    <label>Which team will win the World Cup?</label>
+  </div>
+  <div>
+   <form ng-submit="submit()" ng-controller="Ctrl">
+     Enter the teams that you think could win the World Cup and hit enter:
+     <input type="text" ng-model="text" name="text" />
+     <input type="submit" id="submit" value="Submit" />
+     <pre>list={{list}}</pre>
+   </form>
+  </div>
+
+  <script>
+    function Ctrl($scope) {
+      $scope.list = [];
+      $scope.text = 'Costa Rica';
+      $scope.submit = function() {
+        if ($scope.text) {
+          $scope.list.push(this.text);
+          $scope.text = '';
+        }
+      };
+    }
+  </script>
+
+</body>
+</html>

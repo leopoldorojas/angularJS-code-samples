@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <title>My First App with AngularJS</title>
+
+  <style>
+    .strike {
+      text-decoration: line-through;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .red {
+        color: red;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>World Cup Brasil 2014</h1>
+  <div>
+    <label>Which team will win the group D?</label>
+    <p>Costa Rica</p>
+  </div>
+  <div>
+    <table>
+      <tr><td>Costa Rica</td></tr>
+      <tr><td>England</td></tr>
+      <tr><td>Italy</td></tr>
+      <tr><td>Uruguay</td></tr>
+    </table>
+  </div>
+  <p ng-class="{strike: deleted, bold: important, red: alert}">Definitely Costa Rica!!</p>
+  <input type="checkbox" ng-model="deleted"> I don't think so (apply "strike" class)<br>
+  <input type="checkbox" ng-model="important"> Obvious (apply "bold" class)<br>
+  <input type="checkbox" ng-model="alert"> Red Alert (apply "red" class)
+  <hr>
+  <p ng-class="style">Usando Strings</p>
+  <input type="text" ng-model="style" placeholder="Type: bold strike red">
+  <hr>
+  <p ng-class="[style1, style2, style3]">Using Arreglos</p>
+  <input ng-model="style1" placeholder="Type: bold, strike or red"><br>
+  <input ng-model="style2" placeholder="Type: bold, strike or red"><br>
+  <input ng-model="style3" placeholder="Type: bold, strike or red"><br>
+</body>
+</html>

@@ -19,5 +19,17 @@
       <tr><td>Uruguay</td></tr>
     </table>
   </div>
+  <div ng-init="count=0">
+    <button ng-disabled="checked" ng-click="count = count + 1">
+       Votes for Costa Rica will win the group
+    </button>
+    <br />
+    <button ng-disabled="checked" ng-click="count = count - 1">
+       Votes for Costa Rica won´t win the group
+    </button>
+    <br />    
+    count: {{count}}
+  </div>
+  <p>Do you want to disable the buttons? <input type="checkbox" ng-model="checked"></p>
 </body>
 </html>

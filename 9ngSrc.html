@@ -5,8 +5,9 @@
   <script src="angular.min.js"></script>
   <title>My First App with AngularJS</title>
 </head>
-<body>
+<body ng-init="brazilImg = 'world-cup-logo-2014.jpg'">
   <h1>World Cup Brasil 2014</h1>
+  <img width=250px src="http://www.logodesignlove.com/images/sports/{{brazilImg}}"/>
   <div>
     <label>Which team will win the group D?</label>
     <p>Costa Rica</p>
