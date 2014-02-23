@@ -1,0 +1,16 @@
+<input type="text" ng-model="search" class="search-query" placeholder="Search">
+<table>
+  <thead>
+  <tr>
+    <th>Team</th>
+    <th>Star player</th>
+    <th><a href="#/new">[ Add a Team]</a></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="team in teams | filter:{name: search} | orderBy:'name'">
+    <td><a href="{{team.site}}" target="_blank">{{team.name}}</a></td>
+    <td>{{team.starPlayer}}</td>
+  </tr>
+  </tbody>
+</table>
