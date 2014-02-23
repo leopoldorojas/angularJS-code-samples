@@ -1,13 +1,34 @@
 <!doctype html>
-<html ng-app="worldCup">
-  <head>
-    <script src="angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-    <script src="angular-resource.min.js"></script>
-    <script src="3app.js"></script>
-  </head>
-  <body>
-    <h2>Brazil 2014 Soccer Teams</h2>
-    <div ng-view></div>
-  </body>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <title>My First App with AngularJS</title>
+</head>
+<body>
+  <h1>World Cup Brasil 2014</h1>
+  <div>
+    <label>Which team will win the group D?</label>
+    <p>Costa Rica</p>
+  </div>
+  <div>
+    <table>
+      <tr><td>Costa Rica</td></tr>
+      <tr><td>England</td></tr>
+      <tr><td>Italy</td></tr>
+      <tr><td>Uruguay</td></tr>
+    </table>
+  </div>
+  <div ng-init="count=0">
+    <button ng-click="count = count + 1">
+       Votes for Costa Rica will win the group
+    </button>
+    <br />
+    <button ng-click="count = count - 1">
+       Votes for Costa Rica won´t win the group
+    </button>
+    <br />    
+    count: {{count}}
+  </div>
+</body>
 </html>

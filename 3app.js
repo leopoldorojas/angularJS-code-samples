@@ -6,11 +6,6 @@ angular.module('worldCup', ['ngRoute'])
     {"name":"Brasil", "starPlayer": "Neymar", "site": "http://www.fifa.com/worldcup/teams/team=43924/index.html"}
   ];
 
-
-  //$http.get('/3teams.json').success(function (data) {
-    //teams = data;
-  //});
-
   return {
     getTeams: function() {
       return teams;

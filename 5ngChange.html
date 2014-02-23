@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <title>My First App with AngularJS</title>
+</head>
+<body>
+  <h1>World Cup Brasil 2014</h1>
+  <div>
+    <label>Which team will win the group D?</label>
+    <p>Costa Rica</p>
+  </div>
+  <div>
+    <table>
+      <tr><td>Costa Rica</td></tr>
+      <tr><td>England</td></tr>
+      <tr><td>Italy</td></tr>
+      <tr><td>Uruguay</td></tr>
+    </table>
+  </div>
+  <div ng-controller="Controller">
+    <input type="checkbox" ng-model="costaRica" ng-change="change()" id="ng-change-example1" />
+    <input type="checkbox" ng-model="costaRica" id="ng-change-example2" />
+    <label for="ng-change-example2">Costa Rica?</label><br />
+    <tt>Costa Rica? = {{costaRica}}</tt><br/>
+    <tt>Cambios de opinion? = {{counter}}</tt><br/>    
+  </div>
+</body>
+
+<script>
+    function Controller($scope) {
+      $scope.counter = 0;
+      $scope.change = function() {
+        $scope.counter++;
+      };
+    }
+</script>
+
+</html>
